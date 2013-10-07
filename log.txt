@@ -1,0 +1,11 @@
+t/basic.t .. 
+Dubious, test returned 4 (wstat 1024, 0x400)
+Failed 4/12 subtests 
+
+Test Summary Report
+-------------------
+t/basic.t (Wstat: 1024 Tests: 12 Failed: 4)
+  Failed tests:  8-9, 11-12
+  Non-zero exit status: 4
+Files=1, Tests=12,  1 wallclock secs ( 0.02 usr  0.00 sys +  0.18 cusr  0.01 csys =  0.21 CPU)
+Result: FAIL
