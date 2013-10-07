@@ -7,11 +7,21 @@ Mojolicious::Plugin::MangoAPI - Mojolicious Plugin
 
 =head1 SYNOPSIS
 
-  # Mojolicious
-  $self->plugin('MangoAPI');
+  	# Mojolicious
+  	my $r = $app->routes;
 
-  # Mojolicious::Lite
-  plugin 'MangoAPI';
+	$self->plugin('MangoAPI',{
+		uri => 'mangodb://blabla/mydb',
+		rest_name => 'mydb',
+		route => $r
+  	});
+
+	# POST 		/mydb/test
+	# GET 		/mydb/test
+	# GET 		/mydb/test/525275eb9de4076965010000
+	# PUT 		/mydb/test/525275eb9de4076965010000
+	# DELETE 	/mydb/test/525275eb9de4076965010000
+  	$r->mango_api("test");
 
 =head1 DESCRIPTION
 
